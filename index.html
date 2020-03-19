@@ -67,7 +67,7 @@
     <article id="post-【项目】A-World，AI物联网管理终端" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/03/19/%E3%80%90%E9%A1%B9%E7%9B%AE%E3%80%91A-World%EF%BC%8CAI%E7%89%A9%E8%81%94%E7%BD%91%E7%AE%A1%E7%90%86%E7%BB%88%E7%AB%AF/" class="article-date">
-  <time datetime="2020-03-19T04:08:37.000Z" itemprop="datePublished">2020-03-19</time>
+  <time datetime="2020-03-19T04:28:30.000Z" itemprop="datePublished">2020-03-19</time>
 </a>
     
   </div>
@@ -86,7 +86,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="A-World——AI物联网管理终端"><a href="#A-World——AI物联网管理终端" class="headerlink" title="A World——AI物联网管理终端"></a>A World——AI物联网管理终端</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><ul>
+        <h1 id="A-World，AI物联网管理终端"><a href="#A-World，AI物联网管理终端" class="headerlink" title="A World，AI物联网管理终端"></a>A World，AI物联网管理终端</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><ul>
 <li><p>初衷：做这么一个基于AI的物联网管理终端的出发点其实只是自己想自娱自乐一下，同时也做一些能够送的出手的东西，也是为了不咕咕某人。</p>
 </li>
 <li><p>直到看到了OPPO算法工程师稚晖的AEYE才最终确定了构思。</p>
@@ -96,7 +96,7 @@
 </li>
 </ul>
 <h2 id="初探"><a href="#初探" class="headerlink" title="初探"></a>初探</h2><p>这就要从单片机课的课程设计说起了，单片机课程设计，我使用了Sipeed的K210做了人脸识别的一个玩意儿，在小小的单片机上运行神经网络是一件几乎闻所未闻的事情。以往对神经网络的印象都是运算量大，没好电脑带不动之类的。实际上这是错误的，模型的训练的确是一件很费算力的事情，但是运行已经训练好的模型，并不是件费力的事情。普通的单片机，彩摄都很难采集，比如51架构的单片机。而K210是第一个双核64位RSIC-Ⅴ的芯片，运行主频可以达到600Mhz。你可能会说，600mhz，NXP的i.mx rt系列的也能达到这个速度。最大的亮点来了，这是K210的架构图：</p>
-<p><img src="C:%5CRoad_To_AI%5CDevelop%5C%E5%88%9B%E4%BD%9C%5CK210%5CK210%E6%9E%B6%E6%9E%84.png" alt="avatar"></p>
+<p><img src="/2020/03/19/%E3%80%90%E9%A1%B9%E7%9B%AE%E3%80%91A-World%EF%BC%8CAI%E7%89%A9%E8%81%94%E7%BD%91%E7%AE%A1%E7%90%86%E7%BB%88%E7%AB%AF/K210%E6%9E%B6%E6%9E%84.png" alt="00"></p>
 <ul>
 <li><p>你可以发现他的配置令人兴奋：</p>
 <ul>
@@ -109,24 +109,13 @@
 <li>K210 具备丰富的外设单元，分别是：DVP、JTAG、OTP、FPIOA、GPIO、UART、SPI、RTC、I²S、I²C、 WDT、Timer 与 PWM，可满足海量应用场景。</li>
 </ul>
 </li>
-<li><p>测试人脸识别Face_Detection:</p>
-<video id="video" controls="" preload="none">
-    <source id="mp4" src="C:\Road_To_AI\Develop\创作\K210\FD测试.mp4" type="video/mp4">
-</video>
-</li>
-<li><p>测试实时快速傅里叶变换FFT：</p>
-<video id="video" controls="" preload="none">
-    <source id="mp4" src="C:\Road_To_AI\Develop\创作\K210\FFT测试.mp4" type="video/mp4">
-</video>
-
-</li>
 </ul>
-<h2 id="思维导图"><a href="#思维导图" class="headerlink" title="思维导图"></a>思维导图</h2><p><img src="C:%5CRoad_To_AI%5CDevelop%5C%E5%88%9B%E4%BD%9C%5CK210%5CA-World.png" alt="avatar"></p>
-<h2 id="硬件原理图"><a href="#硬件原理图" class="headerlink" title="硬件原理图"></a>硬件原理图</h2><p><img src="C:%5CRoad_To_AI%5CDevelop%5C%E5%88%9B%E4%BD%9C%5CK210%5C%E5%8E%9F%E7%90%86%E5%9B%BE.png" alt="avatar"></p>
-<h2 id="核心PCB-3D图"><a href="#核心PCB-3D图" class="headerlink" title="核心PCB 3D图"></a>核心PCB 3D图</h2><p><img src="C:%5CRoad_To_AI%5CDevelop%5C%E5%88%9B%E4%BD%9C%5CK210%5C3d1.png" alt="avatar"></p>
-<p><img src="C:%5CRoad_To_AI%5CDevelop%5C%E5%88%9B%E4%BD%9C%5CK210%5C3d2.png" alt="avatar"></p>
-<h2 id="更多"><a href="#更多" class="headerlink" title="更多"></a>更多</h2><ul>
-<li>更多细节可以参考<a href="http://www.pengzhihui.com/2019/09/13/k210-1" target="_blank" rel="noopener" title="稚晖的个人站">稚晖君的博客</a></li>
+<h2 id="维导图"><a href="#维导图" class="headerlink" title="维导图"></a>维导图</h2><p><img src="/2020/03/19/%E3%80%90%E9%A1%B9%E7%9B%AE%E3%80%91A-World%EF%BC%8CAI%E7%89%A9%E8%81%94%E7%BD%91%E7%AE%A1%E7%90%86%E7%BB%88%E7%AB%AF/A-World.png" alt="01"></p>
+<h2 id="硬件原理图"><a href="#硬件原理图" class="headerlink" title="硬件原理图"></a>硬件原理图</h2><p><img src="/2020/03/19/%E3%80%90%E9%A1%B9%E7%9B%AE%E3%80%91A-World%EF%BC%8CAI%E7%89%A9%E8%81%94%E7%BD%91%E7%AE%A1%E7%90%86%E7%BB%88%E7%AB%AF/%E5%8E%9F%E7%90%86%E5%9B%BE.png" alt="02"></p>
+<h2 id="核心PCB-3D图"><a href="#核心PCB-3D图" class="headerlink" title="核心PCB 3D图"></a>核心PCB 3D图</h2><p><img src="/2020/03/19/%E3%80%90%E9%A1%B9%E7%9B%AE%E3%80%91A-World%EF%BC%8CAI%E7%89%A9%E8%81%94%E7%BD%91%E7%AE%A1%E7%90%86%E7%BB%88%E7%AB%AF/3d1.png" alt="03"></p>
+<p><img src="/2020/03/19/%E3%80%90%E9%A1%B9%E7%9B%AE%E3%80%91A-World%EF%BC%8CAI%E7%89%A9%E8%81%94%E7%BD%91%E7%AE%A1%E7%90%86%E7%BB%88%E7%AB%AF/3d2.png" alt="02"></p>
+<h2 id="更多信息请参考："><a href="#更多信息请参考：" class="headerlink" title="更多信息请参考："></a>更多信息请参考：</h2><ul>
+<li><a href="http://www.pengzhihui.com/2019/09/13/k210-1" target="_blank" rel="noopener" title="稚晖的个人站">稚晖君的博客</a></li>
 <li><a href="https://kendryte.com/" target="_blank" rel="noopener">嘉楠勘智官网</a></li>
 <li><a href="https://www.sipeed.com/" target="_blank" rel="noopener">矽速科技官网</a></li>
 </ul>
@@ -134,7 +123,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/03/19/%E3%80%90%E9%A1%B9%E7%9B%AE%E3%80%91A-World%EF%BC%8CAI%E7%89%A9%E8%81%94%E7%BD%91%E7%AE%A1%E7%90%86%E7%BB%88%E7%AB%AF/" data-id="ck7y8m0vq0001nwv75x7u2edx" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/03/19/%E3%80%90%E9%A1%B9%E7%9B%AE%E3%80%91A-World%EF%BC%8CAI%E7%89%A9%E8%81%94%E7%BD%91%E7%AE%A1%E7%90%86%E7%BB%88%E7%AB%AF/" data-id="ck7y9wdqi00011gv77renap97" class="article-share-link">Share</a>
       
       
     </footer>
@@ -182,7 +171,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/03/17/Begin-with-End/" data-id="ck7y8m0vl0000nwv7bluphqnj" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/03/17/Begin-with-End/" data-id="ck7y9wdqe00001gv7hd44h4ny" class="article-share-link">Share</a>
       
       
     </footer>
